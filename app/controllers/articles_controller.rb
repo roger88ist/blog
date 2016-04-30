@@ -25,6 +25,8 @@ class ArticlesController < ApplicationController
 	def update
 		@article = Article.find(params[:id])
 
+		# .update already saves it so this says that if the changes save, send
+		# the page back to the article page, if not start the page again.
 		if @article.update(article_params)
 			redirect_to @article
 		else
