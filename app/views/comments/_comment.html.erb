@@ -8,4 +8,8 @@
 		<strong>Comment:</strong>
 		<%= comment.body %>
 	</p>
+
+	<p>
+		<%= link_to 'Destroy Comment', [comment.article, comment], method: :delete, data: { confirm: "Ary You Sure?" } %>
+	</p>
 <% end %>
